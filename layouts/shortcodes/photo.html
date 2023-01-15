@@ -1,0 +1,10 @@
+{{ if len .Params | eq 3 }}
+<img style="width:33%;height:auto;position:relative;float:left;padding-bottom:1em;" src="/img/photo/{{ .Get 0 }}"/>
+<img style="width:33%;height:auto;position:relative;float:left;padding-bottom:1em;" src="/img/photo/{{ .Get 1 }}"/>
+<img style="width:33%;height:auto;position:relative;float:left;padding-bottom:1em;" src="/img/photo/{{ .Get 2 }}"/>
+{{ else if len .Params | eq 2 }}
+<img style="width:50%;height:auto;position:relative;float:left;padding-bottom:1em;" src="/img/photo/{{ .Get 0 }}"/>
+<img style="width:50%;height:auto;position:relative;float:left;padding-bottom:1em;" src="/img/photo/{{ .Get 1 }}"/>
+{{ else }}
+<img style="height:500px" src="/img/photo/{{ .Get 0 }}"/>
+{{ end }}
