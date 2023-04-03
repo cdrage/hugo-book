@@ -1,10 +1,10 @@
 {{ if len .Params | eq 3 }}
-<img style="width:33%;height:auto;position:relative;float:left;padding-bottom:1em;" src="/img/photo/{{ .Get 0 }}"/>
-<img style="width:33%;height:auto;position:relative;float:left;padding-bottom:1em;" src="/img/photo/{{ .Get 1 }}"/>
-<img style="width:33%;height:auto;position:relative;float:left;padding-bottom:1em;" src="/img/photo/{{ .Get 2 }}"/>
+<img style="width:33%;height:auto;position:relative;float:left;padding-bottom:1em;padding-right:1em;" src="/img/photo/{{ .Get 0 }}.jpg"/>
+<img style="width:33%;height:auto;position:relative;float:left;padding-bottom:1em;" src="/img/photo/{{ .Get 1 }}.jpg"/>
+<img style="width:33%;height:auto;position:relative;float:left;padding-bottom:1em;padding-left:1em;" src="/img/photo/{{ .Get 2 }}.jpg"/>
 {{ else if len .Params | eq 2 }}
-<img style="width:50%;height:auto;position:relative;float:left;padding-bottom:1em;" src="/img/photo/{{ .Get 0 }}"/>
-<img style="width:50%;height:auto;position:relative;float:left;padding-bottom:1em;" src="/img/photo/{{ .Get 1 }}"/>
+<img style="width:50%;height:auto;position:relative;float:left;padding-bottom:1em;padding-right:1em;" src="/img/photo/{{ .Get 0 }}.jpg"/>
+<img style="width:50%;height:auto;position:relative;float:left;padding-bottom:1em;" src="/img/photo/{{ .Get 1 }}.jpg"/>
 {{ else }}
-<img style="height:500px" src="/img/photo/{{ .Get 0 }}"/>
+<img style="width:70%;height:auto;display:block;margin-left:auto;margin-right:auto;" src="/img/photo/{{ .Get 0 }}.jpg"/>
 {{ end }}
