@@ -36,12 +36,16 @@
 
 .checklist {
     font-size:1em;
-
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
 .checklist table {
     border-collapse: collapse;
     width: 100%;
+    display:inline-table;
 }
 
 .checklist th,
@@ -50,9 +54,25 @@ td {
     padding: 8px;
 }
 
+// first td
+.checklist td:first-child {
+    text-align: center;
+}
+
+// Third td
+.checklist td:nth-child(3) {
+    text-align: right;
+}
+
 .checklist th {
     font-family: Arial, sans-serif;
 }
+
+// Third th
+.checklist th:nth-child(3) {
+    text-align: right;
+}
+
 
 .selected {
     background-color: #627db8 !important;
