@@ -1,0 +1,78 @@
+<script>
+    function checkRow(div) {
+
+        let currentIndex = div.parentNode.getAttribute("data-step");
+        console.log(currentIndex);
+
+        rows = div.parentNode.querySelectorAll("tbody tr");
+
+        if (currentIndex < rows.length) {
+            const button = rows[currentIndex].querySelector(".status");
+            button.classList.remove("unchecked");
+            rows[currentIndex].classList.remove("selected");
+            button.classList.add("checked");
+            currentIndex++;
+            if (currentIndex < rows.length) {
+                rows[currentIndex].classList.add("selected");
+            }
+        }
+        
+        div.parentNode.setAttribute("data-step", currentIndex);
+    }
+
+    function skipRow(div) {
+
+        let currentIndex = div.parentNode.getAttribute("data-step");
+        console.log(currentIndex);
+
+        rows = div.parentNode.querySelectorAll("tbody tr");
+
+        if (currentIndex < rows.length) {
+            const button = rows[currentIndex].querySelector(".status");
+            button.classList.remove("unchecked");
+            rows[currentIndex].classList.remove("selected");
+            button.classList.add("skipped");
+            currentIndex++;
+            if (currentIndex < rows.length) {
+                rows[currentIndex].classList.add("selected");
+            }
+        }
+        
+        div.parentNode.setAttribute("data-step", currentIndex);
+    }
+
+    // Reset, mark everything as unchecked, and set the first row as selected
+    function resetRows(div) {
+
+        // Ask the user if they really want to reset
+        if (!confirm("Are you sure you want to reset?")) {
+            return;
+        }
+
+        div.parentNode.setAttribute("data-step", 0);
+        rows = div.parentNode.querySelectorAll("tbody tr");
+        for (let i = 0; i < rows.length; i++) {
+            const button = rows[i].querySelector(".status");
+            button.classList.remove("checked");
+            button.classList.remove("skipped");
+            button.classList.add("unchecked");
+            rows[i].classList.remove("selected");
+        }
+        rows[0].classList.add("selected");
+    }
+
+    function markChecked(button) {
+        // If class contains "unchecked", remove it and add "checked"
+        if (button.classList.contains("unchecked")) {
+            button.classList.remove("unchecked");
+            button.classList.add("checked");
+        } else if (button.classList.contains("checked")) {
+            button.classList.remove("checked");
+            button.classList.add("skipped");
+        } else if (button.classList.contains("skipped")) {
+            button.classList.remove("skipped");
+            button.classList.add("unchecked");
+        }
+    }
+
+</script>

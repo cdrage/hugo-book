@@ -1,90 +1,31 @@
-<style>
-    /* Style the checkmark button */
-    .checkmark {
-        background-color: green;
-        color: white;
-        font-size: 30px;
-        border: none;
-        cursor: pointer;
-        padding: 20px;
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 10px;
-    }
-
-    /* Style the next, clear, and previous buttons */
-    button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        margin-top: 20px;
-        margin-right: 10px;
-    }
-</style>
-<h1>Aviation Checklist</h1>
-<ul id="checklist">
-    <li>
-        <span>Item 1: Check fuel levels</span>
-        <button class="checkmark">&#10003;</button>
-    </li>
-    <li>
-        <span>Item 2: Check navigation equipment</span>
-        <button class="checkmark">&#10003;</button>
-    </li>
-    <li>
-        <span>Item 3: Check weather conditions</span>
-        <button class="checkmark">&#10003;</button>
-    </li>
-</ul>
-<button id="prevBtn">Previous</button>
-<button id="clearBtn">Clear</button>
-<button id="nextBtn">Next</button>
-<script>
-    const checklist = document.getElementById('checklist');
-    const items = checklist.getElementsByTagName('li');
-    let currentItem = 0;
-    // Show the first item on page load
-    showItem(currentItem);
-    // Listen for click events on the checkmark buttons
-    for (let i = 0; i < items.length; i++) {
-        const checkmark = items[i].querySelector('.checkmark');
-        checkmark.addEventListener('click', function () {
-            // Toggle the checkmark on/off
-            this.classList.toggle('checked');
-        });
-    }
-    // Listen for click events on the previous button
-    document.getElementById('prevBtn').addEventListener('click', function () {
-        if (currentItem > 0) {
-            currentItem--;
-            showItem(currentItem);
-        }
-    });
-    // Listen for click events on the next button
-    document.getElementById('nextBtn').addEventListener('click', function () {
-        if (currentItem < items.length - 1) {
-            currentItem++;
-            showItem(currentItem);
-        }
-    });
-    // Listen for click events on the clear button
-    document.getElementById('clearBtn').addEventListener('click', function () {
-        // Remove the checkmark from all items
-        const checkmarks = checklist.querySelectorAll('.checkmark');
-        for (let i = 0; i < checkmarks.length; i++) {
-            checkmarks[i].classList.remove('checked');
-        }
-    });
-    // Show/hide checklist items based on the current item index
-    function showItem(index) {
-        for (let i = 0; i < items.length; i++) {
-            if (i === index) {
-                items[i].style.display = 'block';
-            } else {
-                items[i].style.display = 'none';
-            }
-        }
-    }
-</script>
+<div class="checklist" data-step="0">
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Check</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="selected">
+                <td><button class="status unchecked" onclick="markChecked(this)"></button></td>
+                {{ $foo := .Get 0 }}
+                {{ $split := split $foo ":" }}
+                <td>{{ index $split 0 }}</td>
+                <td>{{ index $split 1 }}</td>
+            </tr>
+            {{ range after 1 .Params }}
+            <tr>
+                <td><button class="status unchecked" onclick="markChecked(this)"></button></td>
+                {{ $split := split . ":" }}
+                <td>{{ index $split 0 }}</td>
+                <td>{{ index $split 1 }}</td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+    <a class="book-btn check-btn" onclick="checkRow(this)">Check</a>
+    <a class="book-btn skip-btn" onclick="skipRow(this)">Skip</a>
+    <a class="book-btn reset-btn" onclick="resetRows(this)">Reset</a>
+</div>

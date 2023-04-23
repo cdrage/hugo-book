@@ -11,3 +11,92 @@
     float: left;
     position: relative;
 }
+
+.check-btn {
+    background-color: green;
+    color:white !important;
+    font-weight:600;
+    border: none !important;
+    font-size:1em !important;
+}
+
+.skip-btn {
+    border: none !important;
+    background-color: yellow;
+    color:black !important;
+    font-weight:600;
+    font-size:1em !important;
+}
+
+.reset-btn {
+    border: none !important;
+    color: red !important;
+    font-size:1em !important;
+}
+
+.checklist {
+    font-size:1em;
+
+}
+
+.checklist table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.checklist th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+.checklist th {
+    font-family: Arial, sans-serif;
+}
+
+.selected {
+    background-color: #627db8 !important;
+    color: white;
+}
+
+.checklist .checked {
+    content: '\2714';
+    font-size: 10px;
+    color: white;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+.checklist .unchecked {
+    content: '';
+    font-size: 10px;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+.checklist .skipped {
+    content: '';
+    font-size: 10px;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    line-height: 24px;
+    vertical-align: middle;
+    background-color: yellow;
+}
