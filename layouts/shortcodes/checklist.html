@@ -10,12 +10,12 @@
         <tbody>
             <tr class="selected">
                 <td><button class="status unchecked" onclick="markChecked(this)"></button></td>
-                {{ $foo := .Get 0 }}
+                {{ $foo := .Get 1 }}
                 {{ $split := split $foo ":" }}
                 <td>{{ index $split 0 }}</td>
                 <td>{{ index $split 1 }}</td>
             </tr>
-            {{ range after 1 .Params }}
+            {{ range after 2 .Params }}
             <tr>
                 <td><button class="status unchecked" onclick="markChecked(this)"></button></td>
                 {{ $split := split . ":" }}
@@ -25,7 +25,7 @@
             {{ end }}
         </tbody>
     </table>
-    <a class="book-btn check-btn" onclick="checkRow(this)">Check</a>
-    <a class="book-btn skip-btn" onclick="skipRow(this)">Skip</a>
     <a class="book-btn reset-btn" onclick="resetRows(this)">Reset</a>
+    <a class="book-btn skip-btn" onclick="skipRow(this)">Skip</a>
+    <a class="book-btn check-btn" onclick="checkRow(this)">Check</a>
 </div>
