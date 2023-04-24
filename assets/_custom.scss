@@ -20,21 +20,21 @@
     color:white !important;
     font-weight:600;
     border: none !important;
-    font-size:1em !important;
+    font-size:1.2em !important;
 }
 
 .skip-btn {
-    border: none !important;
+    border: black !important;
     background-color: yellow;
     color:black !important;
     font-weight:600;
-    font-size:1em !important;
+    font-size:1.2em !important;
 }
 
 .reset-btn {
     border: none !important;
     color: red !important;
-    font-size:1em !important;
+    font-size:0.8em !important;
 }
 
 .checklist {
@@ -46,6 +46,11 @@
     padding-bottom:20px;
     padding-top:20px;
     text-align:right;
+}
+
+.checklist h3 {
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .checklist table {
@@ -108,6 +113,7 @@ td {
     text-align: center;
     line-height: 24px;
     vertical-align: middle;
+    border-color: #000;
 }
 
 .checklist .unchecked {
@@ -122,6 +128,7 @@ td {
     text-align: center;
     line-height: 24px;
     vertical-align: middle;
+    border-color: #000;
 }
 
 .checklist .skipped {
@@ -136,4 +143,5 @@ td {
     line-height: 24px;
     vertical-align: middle;
     background-color: yellow;
+    border-color: #000;
 }
