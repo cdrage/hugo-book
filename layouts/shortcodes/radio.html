@@ -1,0 +1,20 @@
+<div class="radio" data-step="0">
+    <h3>{{ .Get 0 }}</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Intention</th>
+                <th>Radio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range after 1 .Params }}
+            <tr>
+                {{ $split := split . ":" }}
+                <td><i>{{ index $split 0 }}</i></td>
+                <td>{{ index $split 1 }}</td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+</div>
