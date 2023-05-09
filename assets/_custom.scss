@@ -38,6 +38,113 @@
     font-size:0.8em !important;
 }
 
+.procedure {
+    font-size:1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding-bottom:20px;
+    padding-top:20px;
+    text-align:left;
+}
+
+.procedure h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align:center;
+}
+
+.procedure table {
+    border-collapse: collapse;
+    width: 100%;
+    display:inline-table;
+}
+
+.procedure th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+.procedure-buttons {
+    text-align:right;
+}
+
+// first td
+.procedure td:first-child {
+    text-align: left;
+}
+
+// Third td
+.procedure td:nth-child(2) {
+    text-align: left;
+}
+
+.procedure th {
+    font-family: Arial, sans-serif;
+}
+
+// first th
+.procedure th:first-child {
+    max-width:10px;
+    text-align: center;
+}
+
+// Third th
+.procedure th:nth-child(2) {
+    text-align: left;
+}
+
+.procedure th:nth-child(3) {
+    text-align: left;
+}
+
+
+.procedure .checked {
+    content: '\2714';
+    font-size: 10px;
+    color: white;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    line-height: 24px;
+    vertical-align: middle;
+    border-color: #000;
+}
+
+.procedure .unchecked {
+    content: '';
+    font-size: 10px;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    line-height: 24px;
+    vertical-align: middle;
+    border-color: #000;
+}
+
+.procedure .skipped {
+    content: '';
+    font-size: 10px;
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    line-height: 24px;
+    vertical-align: middle;
+    background-color: yellow;
+    border-color: #000;
+}
 .radio {
     font-size:1em;
     display: block;
@@ -52,6 +159,7 @@
 .radio h3 {
     text-transform: uppercase;
     font-weight: 700;
+    text-align:center;
 }
 
 .radio table {
@@ -155,6 +263,7 @@ td {
 .checklist h3 {
     text-transform: uppercase;
     font-weight: 700;
+    text-align:center;
 }
 
 .checklist table {
@@ -248,4 +357,11 @@ td {
 .selected {
     background-color: #627db8 !important;
     color: white;
+}
+
+.book-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
 }
