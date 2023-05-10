@@ -1,32 +1,35 @@
-<div class="checklist" data-step="0">
-    <h3>✔️ Checklist: {{ .Get 0 }} ✔️</h3>
-    <table>
-        <thead>
-            <tr>
-                <th></th>
-                <th>Check</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="selected">
-                <td><button class="status unchecked" onclick="markChecked(this)"></button></td>
-                {{ $foo := .Get 1 }}
-                {{ $split := split $foo ":" }}
-                <td>{{ index $split 0 }}</td>
-                <td>{{ index $split 1 }}</td>
-            </tr>
-            {{ range after 2 .Params }}
-            <tr>
-                <td><button class="status unchecked" onclick="markChecked(this)"></button></td>
-                {{ $split := split . ":" }}
-                <td>{{ index $split 0 }}</td>
-                <td>{{ index $split 1 }}</td>
-            </tr>
-            {{ end }}
-        </tbody>
-    </table>
-    <a class="book-btn reset-btn" onclick="resetRows(this)">Reset</a>
-    <a class="book-btn skip-btn" onclick="skipRow(this)">Skip</a>
-    <a class="book-btn check-btn" onclick="checkRow(this)">Check</a>
-</div>
+<details>
+    <summary>✔️ Checklist: {{ .Get 0 }} ✔️</summary>
+    <div class="checklist" data-step="0">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Check</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="selected">
+                    <td><button class="status unchecked" onclick="markChecked(this)"></button></td>
+                    {{ $foo := .Get 1 }}
+                    {{ $split := split $foo ":" }}
+                    <td>{{ index $split 0 }}</td>
+                    <td>{{ index $split 1 }}</td>
+                </tr>
+                {{ range after 2 .Params }}
+                <tr>
+                    <td><button class="status unchecked" onclick="markChecked(this)"></button></td>
+                    {{ $split := split . ":" }}
+                    <td>{{ index $split 0 }}</td>
+                    <td>{{ index $split 1 }}</td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+        <a class="book-btn reset-btn" onclick="closeDetails(this)">Close</a>
+        <a class="book-btn reset-btn" onclick="resetRows(this)">Reset</a>
+        <a class="book-btn skip-btn" onclick="skipRow(this)">Skip</a>
+        <a class="book-btn check-btn" onclick="checkRow(this)">Check</a>
+    </div>
+</details>

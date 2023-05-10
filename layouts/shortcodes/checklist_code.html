@@ -16,7 +16,7 @@
                 rows[currentIndex].classList.add("selected");
             }
         }
-        
+
         div.parentNode.setAttribute("data-step", currentIndex);
     }
 
@@ -37,7 +37,7 @@
                 rows[currentIndex].classList.add("selected");
             }
         }
-        
+
         div.parentNode.setAttribute("data-step", currentIndex);
     }
 
@@ -76,4 +76,7 @@
         }
     }
 
+    function closeDetails(div) {
+        div.closest("details").removeAttribute("open");
+    }
 </script>
