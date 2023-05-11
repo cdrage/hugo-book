@@ -43,7 +43,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
     padding-bottom:20px;
     padding-top:20px;
     text-align:left;
@@ -150,7 +150,7 @@ td {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
     padding-bottom:20px;
     padding-top:20px;
     text-align:left;
@@ -254,7 +254,7 @@ td {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
     padding-bottom:20px;
     padding-top:20px;
     text-align:left;
@@ -357,4 +357,19 @@ td {
 .selected {
     background-color: #627db8 !important;
     color: white;
+}
+
+.summary-checklist {
+    color:rgb(195, 0, 0);
+    font-weight:700;
+}
+
+.summary-radio {
+    color:rgb(0, 112, 0);
+    font-weight:700;
+}
+
+.summary-procedure {
+    color:purple;
+    font-weight:700;
 }
