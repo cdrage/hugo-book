@@ -4,7 +4,6 @@
     <table>
         <thead>
             <tr>
-                <th></th>
                 <th>Purpose</th>
                 <th>Description</th>
             </tr>
@@ -13,7 +12,6 @@
             {{ range $index, $value := after 1 .Params }}
             <tr>
                 {{ $split := split $value ":" }}
-                <td>{{ add $index 1 }}</td>
                 <td><i>{{ index $split 0 }}</i></td>
                 <td>{{ index $split 1 }}</td>
             </tr>
