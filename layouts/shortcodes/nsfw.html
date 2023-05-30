@@ -1,0 +1,25 @@
+{{ if len .Params | eq 3 }}
+<div style="display:flex;flex-wrap:wrap;">
+    <div style="flex:1;margin-right:10px;">
+        <img style="width:100%;height:auto;display:block;" src="/nsfw/photo/{{ .Get 0 }}.jpg" />
+    </div>
+    <div style="flex:1;margin-right:10px;margin-left:10px;">
+        <img style="width:100%;height:auto;display:block;" src="/nsfw/photo/{{ .Get 1 }}.jpg" />
+    </div>
+    <div style="flex:1;margin-left:10px;">
+        <img style="width:100%;height:auto;display:block;" src="/nsfw/photo/{{ .Get 2 }}.jpg" />
+    </div>
+</div>
+{{ else if len .Params | eq 2 }}
+<div style="display:flex;flex-wrap:wrap;">
+    <div style="flex:1;margin-right:10px;">
+        <img style="width:100%;height:auto;display:block;" src="/nsfw/photo/{{ .Get 0 }}.jpg" />
+    </div>
+    <div style="flex:1;margin-left:10px;">
+        <img style="width:100%;height:auto;display:block;" src="/nsfw/photo/{{ .Get 1 }}.jpg" />
+    </div>
+</div>
+{{ else }}
+<img style="width:auto;max-height:500px;height:auto;display:block;margin-left:auto;margin-right:auto;"
+    src="/nsfw/photo/{{ .Get 0 }}.jpg" />
+{{ end }}
