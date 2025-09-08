@@ -62,25 +62,25 @@
 
 .markdown h1::before {
   content: "> ";
-  color: var(--pale-pink);
+  color: var(--primary-pink);
   font-size: 0.9em;
 }
 
 .markdown h2::before {
   content: ">> ";
-  color: var(--pale-pink);
+  color: var(--primary-pink);
   font-size: 0.9em;
 }
 
 .markdown h3::before {
   content: ">>> ";
-  color: var(--pale-pink);
+  color: var(--primary-pink);
   font-size: 0.9em;
 }
 
 .markdown h4::before, .markdown h5::before, .markdown h6::before {
   content: ">>>> ";
-  color: var(--pale-pink);
+  color: var(--primary-pink);
   font-size: 0.9em;
 }
 
@@ -101,12 +101,22 @@ a:visited {
   color: var(--primary-pink);
 }
 
+/* Keep navbar links consistent */
+.book-menu nav > ul > li > a:visited {
+  color: var(--primary-pink);
+}
+
 /* Code blocks with zenburn styling */
 pre, code {
   background: #3f3f3f !important;
   color: #dcdccc !important;
-  border: 1px solid #5f5f5f;
+  border: none;
   font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Only add border to pre blocks, not inline code */
+pre {
+  border: 1px solid #5f5f5f;
 }
 
 pre {
@@ -115,6 +125,34 @@ pre {
   padding: 16px;
   border-radius: 0;
   box-shadow: 0 0 5px rgba(214, 51, 132, 0.2);
+}
+
+/* Hide empty lines at start/end of code blocks */
+pre code {
+  display: block;
+  white-space: pre;
+}
+
+pre code::before,
+pre code::after {
+  display: none;
+}
+
+/* Remove extra spacing from code tables */
+.highlight table {
+  border-spacing: 0;
+  margin: 0;
+  background: #3f3f3f !important;
+}
+
+.highlight td {
+  padding: 0;
+  border: none;
+  background: #3f3f3f !important;
+}
+
+.highlight {
+  background: #3f3f3f !important;
 }
 
 
