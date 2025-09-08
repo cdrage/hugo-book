@@ -1,6 +1,267 @@
-/* You can add custom styles here. */
+/* 8-bit/Pixel Art Theme Customizations */
 
 // @import "plugins/numbered";
+
+/* 8-bit pixelated global styles */
+* {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Main content area with retro terminal look */
+.book-page {
+  background: var(--body-background);
+  border: 1px solid var(--gray-200);
+  border-radius: 0;
+  box-shadow: 
+    inset 0 0 0 1px var(--gray-100);
+}
+
+/* Sidebar/Menu styling */
+.book-menu {
+  background: var(--body-background);
+  border-right: 3px solid var(--primary-pink);
+  border-image: linear-gradient(45deg, var(--primary-pink), var(--hot-pink), var(--pale-pink)) 1;
+}
+
+.book-menu nav > ul > li > a {
+  color: var(--primary-pink);
+  text-shadow: 0 0 5px var(--primary-pink);
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+}
+
+.book-menu nav > ul > li > a:hover {
+  background: var(--primary-pink);
+  color: var(--body-background);
+  border: 1px solid var(--hot-pink);
+  box-shadow: 0 0 10px var(--primary-pink);
+  text-shadow: none;
+}
+
+/* Headers with 8-bit styling - matching navigation title style */
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+  color: var(--primary-pink);
+  text-shadow: none;
+  position: relative;
+  margin-bottom: 1.2em;
+  margin-top: 1.5em;
+  font-size: 10px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.markdown h1 { font-size: 12px; }
+.markdown h2 { font-size: 11px; }
+.markdown h3 { font-size: 10px; }
+.markdown h4 { font-size: 9px; }
+.markdown h5 { font-size: 8px; }
+.markdown h6 { font-size: 8px; }
+
+.markdown h1::before {
+  content: "> ";
+  color: var(--pale-pink);
+  font-size: 0.9em;
+}
+
+.markdown h2::before {
+  content: ">> ";
+  color: var(--pale-pink);
+  font-size: 0.9em;
+}
+
+.markdown h3::before {
+  content: ">>> ";
+  color: var(--pale-pink);
+  font-size: 0.9em;
+}
+
+.markdown h4::before, .markdown h5::before, .markdown h6::before {
+  content: ">>>> ";
+  color: var(--pale-pink);
+  font-size: 0.9em;
+}
+
+/* Links with retro styling */
+a {
+  color: var(--primary-pink);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--hot-pink);
+  text-shadow: 0 0 5px var(--hot-pink);
+}
+
+a:visited {
+  color: var(--primary-pink);
+}
+
+/* Code blocks with zenburn styling */
+pre, code {
+  background: #3f3f3f !important;
+  color: #dcdccc !important;
+  border: 1px solid #5f5f5f;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+pre {
+  position: relative;
+  overflow: auto;
+  padding: 16px;
+  border-radius: 0;
+  box-shadow: 0 0 5px rgba(214, 51, 132, 0.2);
+}
+
+
+/* Hide all copy buttons in line numbers and code spans */
+span .copy-button,
+.ln .copy-button,
+.lnt .copy-button,
+.line-number .copy-button,
+code .copy-button {
+  display: none !important;
+}
+
+/* Only show copy button on the main pre container */
+pre > .copy-button:first-child {
+  position: absolute !important;
+  right: 8px !important;
+  top: 8px !important;
+  padding: 4px 8px !important;
+  border: 1px solid var(--gray-200) !important;
+  border-radius: 0 !important;
+  cursor: pointer;
+  background-color: var(--gray-100) !important;
+  color: var(--body-font-color) !important;
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 8px !important;
+  text-transform: uppercase;
+  z-index: 10;
+  display: block !important;
+}
+
+pre > .copy-button:first-child:hover {
+  background-color: var(--primary-pink) !important;
+  color: var(--body-background) !important;
+}
+
+/* Scrollbars with subtle styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--body-background);
+  border: 1px solid var(--gray-200);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-500);
+  border: 1px solid var(--gray-200);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pale-pink);
+}
+
+/* Table styling with retro grid */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid var(--primary-pink);
+  background: rgba(255, 105, 180, 0.1);
+}
+
+th, td {
+  border: 1px solid var(--primary-pink);
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+th {
+  background: var(--primary-pink);
+  color: var(--body-background);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+/* Search box styling */
+.book-search input {
+  background: var(--body-background);
+  border: 2px solid var(--primary-pink);
+  color: var(--body-font-color);
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 0;
+  padding: 8px;
+}
+
+.book-search input:focus {
+  outline: none;
+  border-color: var(--hot-pink);
+  box-shadow: 0 0 10px var(--primary-pink);
+}
+
+/* Static effects only - no animations */
+
+/* Button styling for existing buttons */
+button, .btn, input[type="submit"] {
+  background: var(--primary-pink);
+  color: var(--body-background);
+  border: 2px solid var(--hot-pink);
+  padding: 8px 16px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+button:hover, .btn:hover, input[type="submit"]:hover {
+  background: var(--hot-pink);
+  color: var(--body-background);
+  box-shadow: 0 0 15px var(--hot-pink);
+  transform: scale(1.05);
+}
+
+/* Blockquotes with terminal styling */
+blockquote {
+  border-left: 4px solid var(--primary-pink);
+  background: rgba(255, 105, 180, 0.1);
+  padding: 16px;
+  margin: 16px 0;
+  position: relative;
+  border-radius: 0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+blockquote::before {
+  content: "QUOTE > ";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 10px;
+  color: var(--primary-pink);
+  font-family: 'Press Start 2P', monospace;
+}
+
+blockquote p {
+  margin-top: 20px;
+  color: var(--body-font-color);
+}
+
+/* Clean image styling */
+img {
+  border: none;
+  box-shadow: none;
+}
 
 .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
     padding-top:10px;
@@ -365,34 +626,3 @@ td {
     font-weight:700;
 }
 
-.copy-button {
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    padding: 1px 5px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #393d41;
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 0.875rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-    transition: background-color 0.3s, box-shadow 0.3s;
-    font-weight:200;
-    opacity: 0.5;
-  }
-  
-  .copy-button:hover {
-    background-color: #5a6268;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
-  }
-  
-  pre {
-    position: relative;
-    background-color: #f8f9fa;
-    border: 1px solid #e1e1e1;
-    padding: 16px;
-    border-radius: 4px;
-    overflow: auto;
-  }
