@@ -101,8 +101,27 @@ a:visited {
   color: var(--primary-pink);
 }
 
-/* Keep navbar links consistent */
+/* Remove visited styling from sidebar menu links - reset to normal state */
 .book-menu nav > ul > li > a:visited {
+  color: var(--primary-pink);
+  text-shadow: 0 0 5px var(--primary-pink);
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+/* Ensure active page is properly highlighted, overriding visited state */
+.book-menu nav > ul > li > a.active,
+.book-menu nav > ul > li > a.active:visited {
+  background: var(--primary-pink);
+  color: var(--body-background);
+  border: 1px solid var(--hot-pink);
+  box-shadow: 0 0 10px var(--primary-pink);
+  text-shadow: none;
+}
+
+/* Highlight brand/title when on home page */
+.book-brand.home-active a {
   color: var(--primary-pink);
 }
 
