@@ -300,7 +300,6 @@ blockquote {
 }
 
 blockquote::before {
-  content: "QUOTE > ";
   position: absolute;
   top: 8px;
   left: 8px;
