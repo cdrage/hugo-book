@@ -101,13 +101,15 @@ a:visited {
   color: var(--primary-pink);
 }
 
-/* Remove visited styling from sidebar menu links - reset to normal state */
-.book-menu nav > ul > li > a:visited {
-  color: var(--primary-pink);
-  text-shadow: 0 0 5px var(--primary-pink);
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
+/* Remove visited styling from ALL sidebar menu links - reset to normal state */
+.book-menu nav a:visited,
+.book-menu nav > ul > li > a:visited,
+.book-menu nav ul li a:visited {
+  color: var(--primary-pink) !important;
+  text-shadow: 0 0 5px var(--primary-pink) !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
 }
 
 /* Ensure active page is properly highlighted, overriding visited state */
