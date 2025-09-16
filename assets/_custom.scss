@@ -238,7 +238,7 @@ table {
 th, td {
   border: 1px solid var(--primary-pink);
   padding: 8px;
-  background: rgba(0, 0, 0, 0.3);
+  //background: rgba(0, 0, 0, 0.3);
 }
 
 th {
@@ -680,5 +680,14 @@ td {
 .summary-procedure {
     color:purple;
     font-weight:700;
+}
+
+/* Remove extra spacing from columns shortcode */
+.book-columns {
+    margin-top: 0 !important;
+}
+
+.book-columns > div {
+    margin-top: 0 !important;
 }
 
