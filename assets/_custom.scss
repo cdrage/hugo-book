@@ -104,12 +104,18 @@ a:visited {
 /* Remove visited styling from ALL sidebar menu links - reset to normal state */
 .book-menu nav a:visited,
 .book-menu nav > ul > li > a:visited,
-.book-menu nav ul li a:visited {
+.book-menu nav ul li a:visited,
+.book-menu a:visited {
   color: var(--primary-pink) !important;
   text-shadow: none !important;
   background: transparent !important;
   border: 1px solid transparent !important;
   box-shadow: none !important;
+}
+
+/* Override markdown visited link color to match normal links */
+.markdown a:visited {
+  color: var(--primary-pink) !important;
 }
 
 /* Ensure active page is properly highlighted, overriding visited state */
