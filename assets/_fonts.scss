@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Press+Start+2P&display=swap');
 
 /* roboto-regular - latin */
 @font-face {
@@ -33,33 +33,32 @@
 }
 
 body {
-  font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
-  font-size: 14px;
-  line-height: 1.1;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Press Start 2P', monospace;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 12px;
   line-height: 1.8;
 }
 
-h1 { font-size: 14px; }
-h2 { font-size: 12px; }
-h3 { font-size: 11px; }
-h4 { font-size: 10px; }
-h5 { font-size: 9px; }
-h6 { font-size: 8px; }
+h1 { font-size: 1.25rem; }
+h2 { font-size: 1rem; }
+h3 { font-size: 0.875rem; }
+h4 { font-size: 0.75rem; }
+h5 { font-size: 0.7rem; }
+h6 { font-size: 0.65rem; }
 
 .book-menu nav > ul > li > a {
   font-family: 'Press Start 2P', monospace;
-  font-size: 10px;
+  font-size: 0.6rem;
   text-transform: uppercase;
 }
 
 code {
   font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
-  font-size: 13px;
+  font-size: 0.9rem;
 }
