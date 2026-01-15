@@ -28,8 +28,8 @@
 .book-menu nav > ul > li > a {
   color: var(--primary-pink);
   text-shadow: none;
-  transition: all 0.3s ease;
-  padding: 8px 16px;
+  transition: all 0.2s ease;
+  padding: 4px 8px;
   border: 1px solid transparent;
 }
 
@@ -37,51 +37,35 @@
   background: var(--primary-pink);
   color: var(--body-background);
   border: 1px solid var(--hot-pink);
-  box-shadow: 0 0 10px var(--primary-pink);
-  text-shadow: none;
 }
 
-/* Headers with 8-bit styling - matching navigation title style */
+/* Headers with terminal styling */
 .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
   color: var(--primary-pink);
   text-shadow: none;
   position: relative;
-  margin-bottom: 1.2em;
+  margin-bottom: 1em;
   margin-top: 1.5em;
-  font-size: 10px;
-  font-weight: normal;
-  letter-spacing: 1px;
 }
-
-.markdown h1 { font-size: 12px; }
-.markdown h2 { font-size: 11px; }
-.markdown h3 { font-size: 10px; }
-.markdown h4 { font-size: 9px; }
-.markdown h5 { font-size: 8px; }
-.markdown h6 { font-size: 8px; }
 
 .markdown h1::before {
   content: "> ";
   color: var(--primary-pink);
-  font-size: 0.9em;
 }
 
 .markdown h2::before {
   content: ">> ";
   color: var(--primary-pink);
-  font-size: 0.9em;
 }
 
 .markdown h3::before {
   content: ">>> ";
   color: var(--primary-pink);
-  font-size: 0.9em;
 }
 
 .markdown h4::before, .markdown h5::before, .markdown h6::before {
   content: ">>>> ";
   color: var(--primary-pink);
-  font-size: 0.9em;
 }
 
 /* Links with retro styling */
@@ -94,7 +78,6 @@ a {
 
 a:hover {
   color: var(--hot-pink);
-  text-shadow: 0 0 5px var(--hot-pink);
 }
 
 a:visited {
@@ -119,13 +102,14 @@ a:visited {
 }
 
 /* Ensure active page is properly highlighted, overriding visited state */
+.book-menu nav a.active,
+.book-menu nav a.active:visited,
 .book-menu nav > ul > li > a.active,
 .book-menu nav > ul > li > a.active:visited {
-  background: var(--primary-pink);
-  color: var(--body-background);
-  border: 1px solid var(--hot-pink);
-  box-shadow: 0 0 10px var(--primary-pink);
-  text-shadow: none;
+  background: var(--primary-pink) !important;
+  color: var(--body-background) !important;
+  border-left: 3px solid var(--hot-pink);
+  padding-left: 5px;
 }
 
 /* Highlight brand/title when on home page */
@@ -151,7 +135,6 @@ pre {
   overflow: auto;
   padding: 16px;
   border-radius: 0;
-  box-shadow: 0 0 5px rgba(214, 51, 132, 0.2);
 }
 
 /* Hide empty lines at start/end of code blocks */
@@ -203,8 +186,8 @@ pre > .copy-button:first-child {
   cursor: pointer;
   background-color: var(--gray-100) !important;
   color: var(--body-font-color) !important;
-  font-family: 'Press Start 2P', monospace !important;
-  font-size: 8px !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.65rem !important;
   text-transform: uppercase;
   z-index: 10;
   display: block !important;
@@ -240,20 +223,19 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   border: 2px solid var(--primary-pink);
-  background: rgba(255, 105, 180, 0.1);
+  background: rgba(100, 150, 255, 0.05);
 }
 
 th, td {
   border: 1px solid var(--primary-pink);
   padding: 8px;
-  //background: rgba(0, 0, 0, 0.3);
 }
 
 th {
   background: var(--primary-pink);
   color: var(--body-background);
-  font-family: 'Press Start 2P', monospace;
-  font-size: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
   text-transform: uppercase;
 }
 
@@ -270,19 +252,18 @@ th {
 .book-search input:focus {
   outline: none;
   border-color: var(--hot-pink);
-  box-shadow: 0 0 10px var(--primary-pink);
 }
 
 /* Static effects only - no animations */
 
-/* Button styling for existing buttons */
+/* Button styling */
 button, .btn, input[type="submit"] {
   background: var(--primary-pink);
   color: var(--body-background);
   border: 2px solid var(--hot-pink);
   padding: 8px 16px;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -292,14 +273,12 @@ button, .btn, input[type="submit"] {
 button:hover, .btn:hover, input[type="submit"]:hover {
   background: var(--hot-pink);
   color: var(--body-background);
-  box-shadow: 0 0 15px var(--hot-pink);
-  transform: scale(1.05);
 }
 
 /* Blockquotes with terminal styling */
 blockquote {
   border-left: 4px solid var(--primary-pink);
-  background: rgba(255, 105, 180, 0.1);
+  background: rgba(100, 150, 255, 0.05);
   padding: 16px;
   margin: 16px 0;
   position: relative;
@@ -307,17 +286,8 @@ blockquote {
   font-family: 'JetBrains Mono', monospace;
 }
 
-blockquote::before {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  font-size: 10px;
-  color: var(--primary-pink);
-  font-family: 'Press Start 2P', monospace;
-}
-
 blockquote p {
-  margin-top: 20px;
+  margin-top: 0;
   color: var(--body-font-color);
 }
 
@@ -327,9 +297,9 @@ img {
   box-shadow: none;
 }
 
+/* Additional header styling */
 .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
-    padding-top:10px;
-    font-weight: 600;
+    padding-top: 10px;
 }
 .resize {
     width: 50%;

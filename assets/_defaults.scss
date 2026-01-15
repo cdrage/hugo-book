@@ -4,7 +4,7 @@ $padding-4: 0.25rem !default;
 $padding-8: 0.5rem !default;
 $padding-16: 1rem !default;
 
-$font-size-base: 16px !default;
+$font-size-base: 14px !default;
 $font-size-12: 0.75rem !default;
 $font-size-14: 0.875rem !default;
 $font-size-16: 1rem !default;
@@ -34,28 +34,28 @@ $hint-colors: (
   --gray-200: #e9ecef;
   --gray-500: #adb5bd;
 
-  --color-link: #d63384;
-  --color-visited-link: #dc3545;
+  --color-link: #6b21a8;
+  --color-visited-link: #581c87;
 
   --body-background: #ffffff;
   --body-font-color: #212529;
 
   --icon-filter: none;
 
-  --hint-color-info: #f5a9b8;
+  --hint-color-info: #7c3aed;
   --hint-color-warning: #ffc107;
   --hint-color-danger: #dc3545;
-  
+
   --retro-cyan: #17a2b8;
-  --retro-magenta: #e83e8c;
+  --retro-magenta: #9333ea;
   --retro-green: #28a745;
   --retro-yellow: #ffc107;
-  --accent-blue: #5bcefa;
-  --accent-pink: #f5a9b8;
+  --accent-blue: #a78bfa;
+  --accent-pink: #c4b5fd;
   --neutral-white: #ffffff;
-  --primary-pink: #d63384;
-  --hot-pink: #dc3545;
-  --pale-pink: #f8d7da;
+  --primary-pink: #6b21a8;
+  --hot-pink: #581c87;
+  --pale-pink: #ede9fe;
 }
 
 @mixin theme-dark {
@@ -63,26 +63,26 @@ $hint-colors: (
   --gray-200: #2d2d30;
   --gray-500: #3e3e42;
 
-  --color-link: #f5a9b8;
-  --color-visited-link: #ff69b4;
+  --color-link: #a78bfa;
+  --color-visited-link: #c4b5fd;
 
   --body-background: #0d1117;
   --body-font-color: #c9d1d9;
 
   --icon-filter: brightness(0) invert(1);
 
-  --hint-color-info: #f5a9b8;
+  --hint-color-info: #a78bfa;
   --hint-color-warning: #ffffff;
-  --hint-color-danger: #ff1493;
-  
+  --hint-color-danger: #ef4444;
+
   --retro-cyan: #00ffff;
-  --retro-magenta: #ff00ff;
+  --retro-magenta: #a855f7;
   --retro-green: #00ff00;
   --retro-yellow: #ffff00;
-  --accent-blue: #5bcefa;
-  --accent-pink: #f5a9b8;
+  --accent-blue: #a78bfa;
+  --accent-pink: #c4b5fd;
   --neutral-white: #ffffff;
-  --primary-pink: #ff69b4;
-  --hot-pink: #ff1493;
-  --pale-pink: #ffc0cb;
+  --primary-pink: #a78bfa;
+  --hot-pink: #8b5cf6;
+  --pale-pink: #2e1065;
 }
