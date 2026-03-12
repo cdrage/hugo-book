@@ -218,25 +218,23 @@ pre > .copy-button:first-child:hover {
   background: var(--pale-pink);
 }
 
-/* Table styling with retro grid */
+/* Table styling */
 table {
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 0;
-  border: 2px solid var(--primary-pink);
-  background: rgba(100, 150, 255, 0.05);
+  width: 100%;
+  border: 1px solid var(--gray-200);
 }
 
 th, td {
-  border: 1px solid var(--primary-pink);
+  border: 1px solid var(--gray-200);
   padding: 8px;
 }
 
 th {
-  background: var(--primary-pink);
-  color: var(--body-background);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.8rem;
-  text-transform: uppercase;
+  background: var(--gray-100);
+  color: var(--body-font-color);
+  font-weight: 600;
 }
 
 /* Search box styling */
