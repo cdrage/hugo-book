@@ -226,6 +226,29 @@ table {
   border: 1px solid var(--gray-200);
 }
 
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-scroll > table {
+  width: max-content;
+  min-width: 100%;
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .table-scroll {
+    margin-top: $padding-16;
+    margin-bottom: $padding-8;
+  }
+
+  .table-scroll > table {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 th, td {
   border: 1px solid var(--gray-200);
   padding: 8px;
@@ -666,4 +689,3 @@ td {
 .book-columns > div {
     margin-top: 0 !important;
 }
-
